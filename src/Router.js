@@ -4,6 +4,8 @@ import LoginPage from "./Components/Login";
 import Content from "./Components/Content";
 import Register from "./Components/Register";
 import ViewAllMovies from "./Components/ViewAllMovies";
+import AddNewMovie from "./Components/AddNewMovie";
+import Imdb from "./Components/Imdb";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/content" element={<Content />} />
         <Route path="/movies" element={<ViewAllMovies />} />
+        <Route path="/addMovie" element={<AddNewMovie />} />
+        <Route path="/imdb" element={<Imdb />} />
       </Routes>
     </Router>
   );
