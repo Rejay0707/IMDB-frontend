@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
@@ -20,7 +19,7 @@ const LoginPage = () => {
       // console.log(data)
       // localStorage.setItem("user", JSON.stringify(data));
       const { token } = response.data;
-      console.log('Token:', token); // Log the token to verify
+      console.log("Token:", token); // Log the token to verify
       localStorage.setItem("token", token);
 
       navigate("/content");

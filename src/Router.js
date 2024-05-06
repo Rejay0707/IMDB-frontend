@@ -6,6 +6,7 @@ import Register from "./Components/Register";
 import ViewAllMovies from "./Components/ViewAllMovies";
 import AddNewMovie from "./Components/AddNewMovie";
 import Imdb from "./Components/Imdb";
+import EditMovie from "./Components/EditMovie";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/movies" element={<ViewAllMovies />} />
         <Route path="/addMovie" element={<AddNewMovie />} />
         <Route path="/imdb" element={<Imdb />} />
+        <Route path="/editMovie" element={<EditMovie />} />
       </Routes>
     </Router>
   );
