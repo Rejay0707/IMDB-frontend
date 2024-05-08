@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BASE_URL } from "../constants";
 import Modal from "react-bootstrap/Modal";
+import { Link } from "react-router-dom";
 
 const EditMovie = () => {
   const [movies, setMovies] = useState([]);
@@ -38,6 +39,7 @@ const EditMovie = () => {
 
   const handleEdit = (movieId) => {
     setEditMovieId(movieId);
+    console.log(movieId)
     const movieToEdit = movies.find((movie) => movie._id === movieId);
     setFormData(movieToEdit);
     setShowModal(true);
@@ -89,6 +91,9 @@ const EditMovie = () => {
   return (
     <div className="container">
       <h1>Edit Movies</h1>
+      <Link to="/content" className="btn btn-primary mb-3">
+        Back
+      </Link>
       <div className="row">
         {movies.map((movie) => (
           <div className="col-md-4" key={movie._id}>
@@ -107,14 +112,16 @@ const EditMovie = () => {
                 <p className="card-text">Actor: {movie.Actor}</p>
                 <p className="card-text">Producer: {movie.Producer}</p>
                 <p className="card-text">IMDb Rating: {movie.imdbRating}</p>
-                <button
+                
+              </div>
+              <button
                   className="btn btn-primary btn-sm"
                   onClick={() => handleEdit(movie._id)}
                 >
                   Edit
                 </button>
-              </div>
             </div>
+            
           </div>
         ))}
       </div>

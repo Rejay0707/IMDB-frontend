@@ -1,5 +1,7 @@
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { BASE_URL } from "../constants";
 
 const ViewAllMovies = () => {
@@ -29,6 +31,9 @@ const ViewAllMovies = () => {
   return (
     <div className="container">
       <h1>All Movies</h1>
+      <Link to="/content" className="btn btn-primary mb-3">
+        Back
+      </Link>
       <div className="row">
         {movies.map((movie) => (
           <div className="col-md-4" key={movie._id}>
@@ -57,3 +62,4 @@ const ViewAllMovies = () => {
 };
 
 export default ViewAllMovies;
+

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../constants";
+import { Link } from "react-router-dom";
 
 const AddNewMovie = () => {
   const [formData, setFormData] = useState({
@@ -49,7 +50,11 @@ const AddNewMovie = () => {
 
   return (
     <div className="container mt-4">
+      <Link to="/content" className="btn btn-primary mb-3">
+        Back
+      </Link>
       <h2>Add New Movie</h2>
+      
       {message && <div className="alert alert-info">{message}</div>}
       <form onSubmit={handleSubmit}>
         <div className="mb-3">

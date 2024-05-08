@@ -16,7 +16,7 @@ const Content = () => {
   };
 
   const images = [
-    "https://c4.wallpaperflare.com/wallpaper/562/135/739/jake-sully-neytiri-ikran-makto-seze-wallpaper-preview.jpg",
+    "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3849d2d5-1032-4798-be39-61ead128382b/d2ftibl-11e859c6-ca51-4b51-89a0-a6c11c643189.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzM4NDlkMmQ1LTEwMzItNDc5OC1iZTM5LTYxZWFkMTI4MzgyYlwvZDJmdGlibC0xMWU4NTljNi1jYTUxLTRiNTEtODlhMC1hNmMxMWM2NDMxODkuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Olqsp3AJWQuSg-Fgjd_Q-EyubDotlVlQcnDEQKL599g",
     "https://wallpapers.com/images/featured/avengers-vm16xv4a69smdauy.jpg",
     "https://c4.wallpaperflare.com/wallpaper/947/272/849/anime-your-name-kimi-no-na-wa-mitsuha-miyamizu-wallpaper-preview.jpg",
   ];
@@ -24,8 +24,8 @@ const Content = () => {
   return (
     <div>
       <div
-        className="container-fluid bg-dark py-3"
-        style={{ minHeight: "80px" }}
+        className="container-fluid bg-dark py-3 "
+        style={{ minHeight: "10px" }}
       >
         <div className="row">
           <div className="col-4">
@@ -49,14 +49,14 @@ const Content = () => {
           </div>
         </div>
       </div>
-      <div style={{ maxWidth: "600px", margin: "0 auto", height: "700px" }}>
+      <div style={{ height: "700px" }}>
         <Slider {...settings}>
           {images.map((image, index) => (
             <div key={index}>
               <img
                 src={image}
                 alt={`Movie ${index}`}
-                style={{ width: "100%" }}
+                style={{ width: "100%", height: "650px", objectFit: "cover" }}
               />
             </div>
           ))}
